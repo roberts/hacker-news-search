@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+#root {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow-x: hidden;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply text-text bg-gray-100 h-screen;
+    height: -webkit-fill-available;
+  }
+  body {
+    @apply min-h-screen flex;
+    min-height: -webkit-fill-available;
+  }
+}
+
+@layer components {
+  .button {
+    @apply flex relative items-center justify-center box-border py-1 px-1 gap-1.5 cursor-pointer transition duration-300;
+  }
+}
